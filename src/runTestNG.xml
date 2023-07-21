@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Page Object test">
+	<parameter name="appURL"
+		value="https://demo.openmrs.org/openmrs/login.htm" />
+
+	<test name="sample test">
+		<classes>
+			<class name="testcases.LogInTest">
+				<!--				<methods>-->
+				<!--					<include name="logInSuccessfully" />-->
+				<!--					<include name="ViewPatientByNameSuccessfully" />-->
+				<!--				</methods>-->
+			</class>
+		</classes>
+	</test>
+</suite>
