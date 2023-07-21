@@ -27,7 +27,7 @@ public class ValidateHelper {
 		return getPageTitle().contains(pageTitle);
 	}
 
-	// Hôm nay rảnh quá viết dc 2 hàm chung: sendKeys chung và click chung
+
 	public void setText(WebElement element, String valueText) {
 		// wait.until(ExpectedConditions.visibilityOfElementLocated(element));
 		wait.until(ExpectedConditions.elementToBeClickable(element));

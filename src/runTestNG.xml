@@ -5,7 +5,11 @@
 
 	<test name="sample test">
 		<classes>
-			<class name="testcases.LogOutTest">
+			<class name="testcases.LogInTest">
+<!--				<methods>-->
+<!--					<include name="logInSuccessfully" />-->
+<!--					<include name="ViewPatientByNameSuccessfully" />-->
+<!--				</methods>-->
 			</class>
 		</classes>
 	</test>
