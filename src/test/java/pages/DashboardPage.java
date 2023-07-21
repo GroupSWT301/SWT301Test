@@ -37,38 +37,15 @@ public class DashboardPage {
 	{
 		FindPatientModule.click();
 		waitForPageLoaded();
-
+		
 		return new FindPatientPage(driver);
-	}
-
-	public RegisterPatientPage openRegisterPatientPage()
-	{
-		RegisterPatientModule.click();
-		waitForPageLoaded();
-		return new RegisterPatientPage(driver);
-	}
-
-	public VitalPage openVitalPage()
-	{
-		VitalModule.click();
-		waitForPageLoaded();
-		return new VitalPage(driver);
-	}
-
-	public AppointmentPage openAppointmentPage()
-	{
-		VitalModule.click();
-		waitForPageLoaded();
-		return new AppointmentPage(driver);
 	}
 	
 	public boolean verifyDashboardPageTitle() {
 		waitForPageLoaded();
 		return driver.getTitle().equals(expectedDashboardTitle);
 	}
-	
-	//Chờ đợi cho đến khi trang load xong mới thực hiện
-	//Thời gian là 30s
+
 	public void waitForPageLoaded() {
         ExpectedCondition<Boolean> expectation = new
                 ExpectedCondition<Boolean>() {
