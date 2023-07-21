@@ -38,6 +38,7 @@ public class BaseSetup {
 	@BeforeClass
 	public void initializeTestBaseSetup(String appURL) {
 		try {
+
 			setDriver(appURL);
 		} catch (Exception e) {
 			System.out.println("Error..." + e.getStackTrace());
