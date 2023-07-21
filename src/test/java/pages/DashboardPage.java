@@ -32,21 +32,6 @@ public class DashboardPage {
 		this.driver = driver;
 		PageFactory.initElements(this.driver, this);
 	}
-	
-	public FindPatientPage openFindPatientPage()
-	{
-		FindPatientModule.click();
-		waitForPageLoaded();
-
-		return new FindPatientPage(driver);
-	}
-
-	public RegisterPatientPage openRegisterPatientPage()
-	{
-		RegisterPatientModule.click();
-		waitForPageLoaded();
-		return new RegisterPatientPage(driver);
-	}
 
 	public VitalPage openVitalPage()
 	{
@@ -55,20 +40,22 @@ public class DashboardPage {
 		return new VitalPage(driver);
 	}
 
-	public AppointmentPage openAppointmentPage()
+	public void logOut()
 	{
-		VitalModule.click();
+		logoutButton.click();
 		waitForPageLoaded();
-		return new AppointmentPage(driver);
 	}
-	
+
+	public boolean verifyLogout() {
+		waitForPageLoaded();
+		return driver.getTitle().equals(expectedLogoutTitle);
+	}
+
 	public boolean verifyDashboardPageTitle() {
 		waitForPageLoaded();
 		return driver.getTitle().equals(expectedDashboardTitle);
 	}
-	
-	//Chờ đợi cho đến khi trang load xong mới thực hiện
-	//Thời gian là 30s
+
 	public void waitForPageLoaded() {
         ExpectedCondition<Boolean> expectation = new
                 ExpectedCondition<Boolean>() {
